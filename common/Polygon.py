@@ -21,7 +21,7 @@ class Polygon:
                 and other.equal == self.equal
                 and other.parallel == self.parallel)
 
-    def to_csv(self):
+    def __csv__(self):
         return ";".join([str(self.slide), str(self.angle), str(self.equal), str(self.parallel), self.name])
 
     def __str__(self):

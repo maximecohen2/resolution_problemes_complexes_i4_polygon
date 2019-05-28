@@ -2,9 +2,6 @@
 # coding: utf-8
 
 
-from common.Polygon import Polygon
-
-
 class RuleBase:
 
     def find_polygon(self, polygon):

@@ -15,9 +15,9 @@ class Engine:
     def find_polygon(self, slide, angle, equal, parallel):
         newpolygon = Polygon(slide, angle, equal, parallel)
         knownpolygon = self.factbase.find_polygon(newpolygon)
-        if knownpolygon is not None:
-            return knownpolygon
-        else:
+        if knownpolygon is None:
             self.rulebase.find_polygon(newpolygon)
             self.factbase.add_polygon(newpolygon)
-        return newpolygon
+            return newpolygon
+        return knownpolygon
+

@@ -28,5 +28,5 @@ class FactBase:
 
     def add_polygon(self, newpolygon):
         with open(self.datafile, "a+") as file:
-            file.write(newpolygon.to_csv() + os.linesep)
+            file.write(newpolygon.__csv__() + os.linesep)
         file.close()
